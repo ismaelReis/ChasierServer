@@ -29,10 +29,6 @@
         <service
             android:name=".Service.FileTransferService"
             android:enabled="true" />
-        <service
-            android:name=".Service.DataTransferService"
-            android:enabled="true"
-            android:exported="true"></service>
     </application>
 
 </manifest>

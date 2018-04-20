@@ -7,8 +7,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.Uri;
 
-import android.net.wifi.WpsInfo;
-import android.net.wifi.p2p.WifiP2pConfig;
 import android.net.wifi.p2p.WifiP2pDevice;
 import android.net.wifi.p2p.WifiP2pDeviceList;
 import android.net.wifi.p2p.WifiP2pInfo;
@@ -16,7 +14,6 @@ import android.net.wifi.p2p.WifiP2pManager;
 import android.os.AsyncTask;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.Looper;
 
 
@@ -34,7 +31,6 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 import java.lang.reflect.Method;
@@ -48,7 +44,6 @@ import br.com.alphasignage.servidorcaixalivre.Adapter.MyAdapter;
 import br.com.alphasignage.servidorcaixalivre.BroadcastReceiver.WifiDirectBroadcastReceiver;
 import br.com.alphasignage.servidorcaixalivre.R;
 
-import br.com.alphasignage.servidorcaixalivre.Service.DataTransferService;
 import br.com.alphasignage.servidorcaixalivre.Service.FileTransferService;
 import br.com.alphasignage.servidorcaixalivre.Task.DataServerAsyncTask;
 
@@ -252,7 +247,7 @@ public class MainActivity extends AppCompatActivity {
                  /*   mServerTask = new FileServerAsyncTask(MainActivity.this, view);
                     mServerTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);*/
 
-                    mDataTask = new DataServerAsyncTask(MainActivity.this, view);
+                   mDataTask = new DataServerAsyncTask(MainActivity.this, view);
                     mDataTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                    // sendData();
 
